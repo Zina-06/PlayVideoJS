@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayerVideo</title>
+    <style>
+                *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .mainVideo{
+            margin-top: 40px;
+            width: 100%;
+            text-align: center;
+        }
+
+        video{
+            width: 50%;
+        }
+
+        body{
+            background-color: dimgray;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="mainVideo">
+        <video controls>
+            <source src="video.mp4" type="video/mp4"/>
+        </video>
+    </div>
+
+    <script>
+        var video = document.querySelector('video');
+        var cutVideo = false;
+        //var token = video.currentTime
+        //Evento de atualização do video
+        video.ontimeupdate = ()=>{
+            console.log(parseInt(video.currentTime))
+        }
+
+        
+    </script>
+</body>
+</html>
